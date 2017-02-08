@@ -109,4 +109,12 @@
         <property name="lime" ref="lime" />
     </bean>
 
+
+    <bean id="lime2" class="com.springinaction.scripting.LimeImpl" />
+
+    <lang:groovy id="coconutGroovy"
+                 script-source="CoconutGroovy.groovy">
+        <lang:property name="lime" ref="lime2" />
+    </lang:groovy>
+
 </beans>
