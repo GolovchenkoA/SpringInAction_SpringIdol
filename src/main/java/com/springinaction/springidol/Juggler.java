@@ -10,6 +10,10 @@ public class Juggler implements Performer {
     public Juggler(int beanBags) {
         this.beanBags = beanBags;
     }
+
+    public void setBags(int beanBags){
+        this.beanBags = beanBags;
+    }
     public void perform() throws PerformanceException {
         System.out.println("JUGGLING " + beanBags + " BEANBAGS");
     }

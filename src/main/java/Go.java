@@ -1,3 +1,4 @@
+import com.springinaction.springidol.Juggler;
 import com.springinaction.springidol.PerformanceException;
 import com.springinaction.springidol.Performer;
 import org.springframework.context.ApplicationContext;
@@ -18,13 +19,20 @@ public class Go {
 
         // JUGGLING 15 BEANBAGS
         Performer duke15 = (Performer) ctx.getBean("duke15");
+        //duke15.perform();
+
+        Performer duke15_2 = (Performer) ctx.getBean("duke15");
+        //duke15.perform();
+
+        if(duke15_2 instanceof Juggler){
+            ((Juggler) duke15_2).setBags(20);
+        }
+
         duke15.perform();
 
-
-
-        // PoeticJuggler
+/*        // PoeticJuggler
         Performer poeticJuggler = (Performer) ctx.getBean("jackie_chan");
-        poeticJuggler.perform();
+        poeticJuggler.perform();*/
 
     }
 }

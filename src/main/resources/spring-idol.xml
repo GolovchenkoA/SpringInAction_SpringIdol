@@ -17,5 +17,13 @@
               <constructor-arg ref="sonet29_bean"/>
        </bean>
 
+       <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
+
+       <bean id="Ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
+
+       <bean id="theAuditorium" class="com.springinaction.springidol.Auditorium"/>
+
+
+
 
 </beans>
