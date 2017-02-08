@@ -13,4 +13,8 @@ public class Juggler implements Performer {
     public void perform() throws PerformanceException {
         System.out.println("JUGGLING " + beanBags + " BEANBAGS");
     }
+
+    public String performText(){
+        return "JUGGLING " + beanBags + " BEANBAGS";
+    }
 }

@@ -5,4 +5,5 @@
 
        <bean id="duke" class="com.springinaction.springidol.Juggler"/>
 
+
 </beans>
