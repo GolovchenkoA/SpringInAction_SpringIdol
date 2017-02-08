@@ -21,7 +21,18 @@
 
        <bean id="Ticket" class="com.springinaction.springidol.Ticket" scope="prototype"/>
 
-       <bean id="theAuditorium" class="com.springinaction.springidol.Auditorium"/>
+       <bean id="theAuditorium"
+             class="com.springinaction.springidol.Auditorium"
+             init-method="turnLightOn"
+             destroy-method="turnLightOff"/>
+
+       <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
+
+       <bean id="scooter" class="com.springinaction.springidol.Instrumentalist">
+              <property name="song" value="How Much is the fish"/>
+              <property name="instrument" ref="saxophone"/>
+
+       </bean>
 
 
 

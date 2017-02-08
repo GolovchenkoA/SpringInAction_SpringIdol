@@ -1,6 +1,4 @@
-import com.springinaction.springidol.Juggler;
-import com.springinaction.springidol.PerformanceException;
-import com.springinaction.springidol.Performer;
+import com.springinaction.springidol.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +12,7 @@ public class Go {
         //ApplicationContext ctx = new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-idol.xml");
 
-        Performer performer = (Performer) ctx.getBean("duke");
+/*        Performer performer = (Performer) ctx.getBean("duke");
         performer.perform();
 
         // JUGGLING 15 BEANBAGS
@@ -28,11 +26,19 @@ public class Go {
             ((Juggler) duke15_2).setBags(20);
         }
 
-        duke15.perform();
+        duke15.perform();*/
 
 /*        // PoeticJuggler
         Performer poeticJuggler = (Performer) ctx.getBean("jackie_chan");
         poeticJuggler.perform();*/
+
+/*        //Auditorium Class
+        Auditorium auditorium = (Auditorium)ctx.getBean("theAuditorium");
+        System.out.format("Light ON: %b ",auditorium.getLightOn());*/
+
+        //Scooter
+        Instrumentalist scooter = (Instrumentalist) ctx.getBean("scooter");
+        scooter.perform();
 
     }
 }
