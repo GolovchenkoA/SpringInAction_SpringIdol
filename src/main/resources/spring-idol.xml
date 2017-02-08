@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:p="http://www.springframework.org/schema/p">
 
        <bean id="duke" class="com.springinaction.springidol.Juggler"/>
 
@@ -28,10 +29,16 @@
 
        <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
 
-       <bean id="scooter" class="com.springinaction.springidol.Instrumentalist">
-              <property name="song" value="How Much is the fish"/>
-              <property name="instrument" ref="saxophone"/>
+       <bean id="scooter" class="com.springinaction.springidol.Instrumentalist"
+             p:song="How Much is the fish"
+               p:instrument-ref = "saxophone"/>
 
+
+       <bean id="individualInstrument" class="com.springinaction.springidol.Instrumentalist">
+              <property name="song" value="Мы начинаем КВН. для чего... для кого..."/>
+              <property name="instrument">
+                     <bean class="com.springinaction.springidol.Saxophone"/>
+              </property>
        </bean>
 
 
