@@ -52,6 +52,12 @@
               </property>
        </bean>
 
+       <!-- Carl подражатель.  We usage SpEL  (Spring Expression Language-->
+       <bean id="carl"
+             class="com.springinaction.springidol.Instrumentalist">
+              <property name="song" value="#{scooter.song}" />
+       </bean>
+
 
 
 </beans>

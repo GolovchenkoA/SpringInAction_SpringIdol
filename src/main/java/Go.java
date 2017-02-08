@@ -41,9 +41,18 @@ public class Go {
         Instrumentalist scooter = (Instrumentalist) ctx.getBean("scooter");
         scooter.perform();*/
 
-        //OneManBand
+/*        //OneManBand
         Performer hank_oneManBand = (Performer) ctx.getBean("hank");
-        hank_oneManBand.perform();
+        hank_oneManBand.perform();*/
 
+/*        // Подражатель
+        Performer scooter = (Performer) ctx.getBean("scooter");
+        ((Instrumentalist) scooter).setSong("Fireeeeeeeeee");
+        //((Instrumentalist) scooter).screamSong();
+        scooter.perform();
+
+        Performer carl = (Performer) ctx.getBean("carl");
+        ((Instrumentalist)carl).screamSong();
+        carl.perform();*/
     }
 }
