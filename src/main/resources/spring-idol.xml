@@ -5,5 +5,17 @@
 
        <bean id="duke" class="com.springinaction.springidol.Juggler"/>
 
+       <bean id="duke15"
+             class="com.springinaction.springidol.Juggler">
+              <constructor-arg value="15" />
+       </bean>
+
+       <bean id="sonet29_bean" class="com.springinaction.springidol.Sonet29"/>
+
+       <bean id="jackie_chan" class="com.springinaction.springidol.PoeticJuggler">
+              <constructor-arg value="16"/>
+              <constructor-arg ref="sonet29_bean"/>
+       </bean>
+
 
 </beans>

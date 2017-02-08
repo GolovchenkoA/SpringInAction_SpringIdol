@@ -16,5 +16,15 @@ public class Go {
         Performer performer = (Performer) ctx.getBean("duke");
         performer.perform();
 
+        // JUGGLING 15 BEANBAGS
+        Performer duke15 = (Performer) ctx.getBean("duke15");
+        duke15.perform();
+
+
+
+        // PoeticJuggler
+        Performer poeticJuggler = (Performer) ctx.getBean("jackie_chan");
+        poeticJuggler.perform();
+
     }
 }
