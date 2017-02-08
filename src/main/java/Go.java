@@ -1,6 +1,7 @@
 import com.springinaction.springidol.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import sun.misc.Perf;
 
 /**
  * Created by головченко on 06.02.2017.
@@ -36,9 +37,13 @@ public class Go {
         Auditorium auditorium = (Auditorium)ctx.getBean("theAuditorium");
         System.out.format("Light ON: %b ",auditorium.getLightOn());*/
 
-        //Scooter
+/*        //Scooter
         Instrumentalist scooter = (Instrumentalist) ctx.getBean("scooter");
-        scooter.perform();
+        scooter.perform();*/
+
+        //OneManBand
+        Performer hank_oneManBand = (Performer) ctx.getBean("hank");
+        hank_oneManBand.perform();
 
     }
 }

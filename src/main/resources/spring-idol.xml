@@ -41,6 +41,16 @@
               </property>
        </bean>
 
+       <bean id="drum" class="com.springinaction.springidol.Drum"/>
+
+       <bean id="hank" class="com.springinaction.springidol.OneManBand">
+              <property name="instruments">
+                     <list>
+                            <ref bean="saxophone"/>
+                            <ref bean="drum"/>
+                     </list>
+              </property>
+       </bean>
 
 
 
