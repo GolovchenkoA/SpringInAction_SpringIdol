@@ -1,3 +1,4 @@
+import com.springinaction.scripting.Coconut;
 import com.springinaction.springidol.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -54,5 +55,12 @@ public class Go {
         Performer carl = (Performer) ctx.getBean("carl");
         ((Instrumentalist)carl).screamSong();
         carl.perform();*/
+
+
+            //Java and Scripting Languages
+
+            Coconut coconut = (Coconut)ctx.getBean("coconut");
+            coconut.drinkThemBothUp();
+
     }
 }
