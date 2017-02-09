@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean id="human1" class="ua.golovchenko.artem.humans.Human" autowire="byName"/>
+       <bean id="headdress" class="ua.golovchenko.artem.humans.clothes.Headdress.BaseballCap"/>
+       <bean id="jacket" class="ua.golovchenko.artem.humans.clothes.jackets.LeatherJacket"/>
+
+
+       <bean id="human2" class="ua.golovchenko.artem.humans.Human" autowire="byName"/>
+
+
+</beans>
