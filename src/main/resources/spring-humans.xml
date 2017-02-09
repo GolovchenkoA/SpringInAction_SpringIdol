@@ -5,11 +5,26 @@
 
 
        <bean id="human1" class="ua.golovchenko.artem.humans.Human" autowire="byName"/>
-       <bean id="headdress" class="ua.golovchenko.artem.humans.clothes.Headdress.BaseballCap"/>
+       <bean id="headdress" class="ua.golovchenko.artem.humans.clothes.Headdress.BaseballCap" autowire-candidate="false"/>
        <bean id="jacket" class="ua.golovchenko.artem.humans.clothes.jackets.LeatherJacket"/>
 
+       <!--autowire="byType" -->
+       <bean id="human2" class="ua.golovchenko.artem.humans.Human" autowire="byType"/>
 
-       <bean id="human2" class="ua.golovchenko.artem.humans.Human" autowire="byName"/>
+
+       <!--autowire Constructor-->
+       <bean id="human3" class="ua.golovchenko.artem.humans.Human" autowire="constructor"/>
+
+       <!--autowire Default (No Autowired)-->
+       <bean id="human4" class="ua.golovchenko.artem.humans.Human" autowire="default"/>
+
+       <!--autowire No-->
+       <bean id="human5" class="ua.golovchenko.artem.humans.Human" autowire="no"/>
+
+       <!--autowire and explicit binding-->
+       <bean id="human6" class="ua.golovchenko.artem.humans.Human" autowire="byType">
+              <property name="headdress" ref="headdress"></property>
+       </bean>
 
 
 </beans>
