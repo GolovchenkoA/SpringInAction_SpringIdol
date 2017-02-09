@@ -1,6 +1,8 @@
 package ua.golovchenko.artem.humans;
 
 import com.springinaction.springidol.PerformanceException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,6 +13,7 @@ public class Go {
     public static void main(String[] args) throws PerformanceException {
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-humans.xml");
+        ApplicationContext ctx2 = new ClassPathXmlApplicationContext("spring-idol.xml");
 /*
         // Link by Name
         Human human1 = (Human) ctx.getBean("human1");
@@ -31,8 +34,14 @@ public class Go {
         //human5.meDressedIn(); //exception - no autowired*/
 
 
-        //autowire and explicit binding
+/*        //autowire and explicit binding
         Human human6 = (Human) ctx.getBean("human6");
-        human6.meDressedIn();
+        human6.meDressedIn();*/
+
+
+        //Android Autowired annotation
+        Android android = (Android) ctx2.getBean("android");
+        android.iPlayOn();
+
     }
 }

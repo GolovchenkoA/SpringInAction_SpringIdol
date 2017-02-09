@@ -1,5 +1,7 @@
 package com.springinaction.springidol;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.sound.midi.Instrument;
 
 /**
@@ -25,7 +27,7 @@ public class Instrumentalist implements Performer {
     public String screamSong(){
         return song;
     }
-
+    @Autowired
     public void setInstrument(com.springinaction.springidol.Instrument instrument) {
         this.instrument = instrument;
     }
