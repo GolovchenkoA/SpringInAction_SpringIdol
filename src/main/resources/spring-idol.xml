@@ -125,4 +125,6 @@
         <qualifier value="mega_balalayka"/>
     </bean>
 
+    <bean class="com.springinaction.springidol.Bandura"/>
+
 </beans>

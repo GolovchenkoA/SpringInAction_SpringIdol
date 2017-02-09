@@ -1,6 +1,7 @@
 package ua.golovchenko.artem.humans;
 
 import com.springinaction.springidol.Instrument;
+import com.springinaction.springidol.qualifiers.StringedInstrument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import ua.golovchenko.artem.humans.clothes.Clothes;
@@ -19,6 +20,10 @@ public class Android {
     @Qualifier("mega_balalayka")
     Instrument instrument2;
 
+    @Autowired
+    @StringedInstrument
+    Instrument instrument3;
+
     public Android(){}
 
 
@@ -34,5 +39,6 @@ public class Android {
     public void iPlayOn(){
         instrument.play();
         instrument2.play();
+        instrument3.play();
     }
 }
