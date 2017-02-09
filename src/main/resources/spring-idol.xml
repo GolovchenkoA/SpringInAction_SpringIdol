@@ -121,4 +121,8 @@
 
     <bean id="android" class="ua.golovchenko.artem.humans.Android"/>
 
+    <bean id="balalayka" class="com.springinaction.springidol.Balalayka">
+        <qualifier value="mega_balalayka"/>
+    </bean>
+
 </beans>
